@@ -4,9 +4,9 @@ var signup=require('./signup');
 var mysql=require('mysql');
 var connection=mysql.createConnection({
 	host     : '127.0.0.1',
-    user     : 'admin',
-    password : 'admin',
-    database    : 'vandita'
+    user     : '',
+    password : '',
+    database    : ''
 });
 
 connection.connect(function(err) {
@@ -17,10 +17,10 @@ connection.connect(function(err) {
 
 app.use(express.static('public'));
 app.get('/index.htm', function (req, res) {
-   res.sendFile( "C:/Users/vandi" + "/" + "index.html" );
+   res.sendFile( "" + "/" + "" );
 })
 app.get('/signup.htm', function (req, res) {
-   res.sendFile( "C:/Users/vandi" + "/" + "index.html" ); 
+   res.sendFile( "" + "/" + "" ); 
 })
 
 app.post('/process_get',signup.signup(req, res));
@@ -28,6 +28,6 @@ app.post('/process_get',signup.signup(req, res));
 var server = app.listen(8081, function () {
    var host = server.address().address
    var port = server.address().port
-   console.log("Example app listening at http://%s:%s", host, port)
+   console.log("http://%s:%s", host, port)
 
 })
