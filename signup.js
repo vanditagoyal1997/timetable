@@ -1,9 +1,9 @@
 var mysql=require('mysql');
 var connection=mysql.createConnection({
 	host     : '127.0.0.1',
-    user     : 'admin',
-    password : 'admin',
-    database    : 'vandita'
+    user     : '',
+    password : '',
+    database    : ''
 });
 
 connection.connect(function(err) {
