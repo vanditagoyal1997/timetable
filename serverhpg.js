@@ -9,12 +9,12 @@ var app = express();
 //getting the homepage
 app.use(express.static('public'));
 app.get('/index.htm', function (req, res) {
-   res.sendFile( "C:/Users/vandi" + "/" + "index.html" );
+   res.sendFile( "" + "/" + "" );
 })
 
 //getting the signup page
 app.get('/signup.htm', function (req, res) {
-   res.sendFile( "C:/Users/vandi" + "/" + "signup.html" );
+   res.sendFile( "" + "/" + "" );
    
 })
 
@@ -26,7 +26,7 @@ app.get('/signup_get',function(req,res){
 
 //getting the login page
 app.get('/login.htm', function (req, res) {
-   res.sendFile( "C:/Users/vandi" + "/" + "login.html" );
+   res.sendFile( "" + "/" + "");
    
 })
 
@@ -37,7 +37,7 @@ app.get('/login_get',function(req,res){
 
 //getting the home page
 app.get('/home.htm',function(req,res){
-	res.sendFile("C:/Users/vandi"+"/"+"home.html");
+	res.sendFile(""+"/"+"");
 })
 
 //for generating the timetable
@@ -48,7 +48,7 @@ app.get('/tt_get',function(req,res){
 var server = app.listen(8081, function () {
    var host = server.address().address
    var port = server.address().port
-   console.log("Example app listening at http://%s:%s", host, port)
+   console.log("http://%s:%s", host, port)
 
 })
 
